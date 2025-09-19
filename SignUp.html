@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header Example</title>
+  <link rel="stylesheet" href="CSS/styles.css" />
+  
+
+</head>
+<body>
+<header class="navbar">
+    <div class="logo"><img src="images/Logo.jpg" alt="Logo" /></div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="home-link">Home</a>
+
+            <div class="dropdown">
+                <a href="service.html" class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                <a href="/services/home-assistance">HouseMaid</a>
+                <a href="/services/companionship">ShoppingHand</a>
+                <a href="/services/transport">SecurityGuard</a>
+                <a href="/services/urgent-support">Tutor</a>
+                </div>
+            </div>
+
+            <a href="/contact" class="contact-link">Contact</a>
+        </nav>
+
+        <div class="auth-buttons">
+            <a href="SignUp.html" class="btn signup">Sign Up</a>
+            <a href="login.html" class="btn signin">Sign In</a>
+        </div>
+  </div>
+</header>
+
+
+<main class="signup-container">
+    
+  <h1>Create Your Account</h1>
+  <form class="signup-form" action="signup.php" method="POST">
+    <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+    <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+    <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+    <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" required />
+    <label for="service">Select Service Category</label>
+      <select id="service" name="service" required>
+        <option value="">-- Choose a Service --</option>
+        <option value="housemaid">HouseMaid</option>
+        <option value="shoppinghand">ShoppingHand</option>
+        <option value="security">Security</option>
+        <option value="tutor">Tutor</option>
+        <option value="Customer">Customer</option>
+      </select>
+
+      <button type="submit" class="signup-button">Sign Up</button>
+  </form>
+  <p class="login-link">Already have an account? <a href="/login">Log in here</a></p>
+</main>
+
+<footer>
+    <div class="container">
+      <p>&copy; 2025 Helping Hand. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+  document.querySelector('.signup-form').addEventListener('submit', function(e) {
+    const pw = document.getElementById('password').value;
+    const cpw = document.getElementById('confirm-password').value;
+    if (pw !== cpw) {
+      e.preventDefault();
+      alert('Passwords do not match.');
+    }
+  });
+</script>
+
+</body>
+</html>

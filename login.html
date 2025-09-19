@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="Css/styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"><img src="images/Logo.jpg" alt="Logo" /></div>
+
+    <nav class="nav-links">
+      <a href="index.php" class="nav-item home-link">Home</a>
+
+      <div class="dropdown nav-item">
+        <a href="service.php" class="dropbtn">Services</a>
+        <div class="dropdown-content">
+          <a href="/services/home-assistance">HouseMaid</a>
+          <a href="/services/companionship">ShoppingHand</a>
+          <a href="/services/transport">SecurityGuard</a>
+          <a href="/services/urgent-support">Tutor</a>
+        </div>
+      </div>
+
+      <a href="contact.php" class="nav-item contact-link">Contact</a>
+    </nav>
+
+
+
+    <!--<div class="auth-buttons">
+      <a href="SignUp.html" class="btn signup">Sign Up</a>
+      <a href="login.html" class="btn signin">Sign In</a>
+    </div>-->
+</header>
+
+  <main class="login-container">
+    <h1>Welcome Back</h1>
+    <form class="login-form" action="login.php" method="POST">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit" class="login-button">Sign In</button>
+    </form>
+    <p class="signup-link">Don't have an account? <a href="/signup">Create one here</a></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- This is a template file. Do not access directly. Use user.php instead. -->
+
+<!-- user.html -->
+<!-- user.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="CSS/styles.css" /> <!-- Same CSS as index.html -->
+
+</head>
+<body>
+
+
+
+  <!-- Main dashboard content -->
+<main class="container">
+<section class="space">
+  <h1>Welcome</h1>
+  <p><strong>Full Name:</strong> {{name}}</p>
+  <p><strong>Email:</strong> {{email}}</p>
+  <p><strong>Service Category:</strong> {{service}}</p>
+</section>
+
+
+
+
+  <section class="space">
+    <p class="test"><b>Here you can manage your profile, bookings, and services.</b></p>
+  </section>
+
+  <section class="space">
+    <h2 >Edit Your Profile</h2>
+    <form action="update-profile.php" method="POST" class="profile-form">
+      <p ><label for="name">Full Name</label></p>
+      <input type="text" id="name" name="name" value="{{name}}" required />
+
+      <p ><label for="email">Email</label></p>
+      <input type="email" id="email" name="email" value="{{email}}" required />
+
+      <p ><label for="service">Service Category</label></p>
+      <select id="service" name="service" required>
+        <option value="HouseMaid" {{selected_housemaid}}>HouseMaid</option>
+        <option value="ShoppingHand" {{selected_shoppinghand}}>ShoppingHand</option>
+        <option value="Security" {{selected_security}}>Security</option>
+        <option value="Tutor" {{selected_tutor}}>Tutor</option>
+      </select>
+    </section>
+
+    <section class="space">
+      <p><button type="submit">Update Profile</button></p>
+    </section>
+    </form>
+  </section>
+</main>
+
+
+ 
+
+</body>
+</html>
