@@ -1,0 +1,782 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+main {
+  flex: 1; /* Pushes footer down */
+}
+
+/* Header layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position:relative;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+
+.logo img {
+  width: 150px; /* Adjust width as needed */
+  height: auto; /* Maintains aspect ratio */
+  display: inline-block;
+}
+/* Navigation links */
+/* Navigation container */
+.nav-links {
+  display: flex;
+  justify-content: center;   /* Center the links horizontally */
+  gap: 20px;
+  align-items: center;
+  margin: 0 auto;            /* Center the container itself */
+  max-width: 600px;          /* Optional: controls width for better alignment */
+}
+
+
+/* Base nav item style */
+.nav-links a {
+  background-color: #4ecdc4;
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  font-size: 1em;
+}
+
+.nav-links a:hover
+{
+  background-color: #38b2a6;
+  transform: scale(1.05);
+}
+/* Individual colors */
+.nav-links a:nth-child(1) {
+  background-color: #6b86ff;
+}
+.nav-links a:nth-child(2) {
+  background-color: #cdcb4e;
+}
+.nav-links a:nth-child(3) {
+  background-color: #ffa502;
+}
+
+.nav-links a:nth-child(4) {
+  background-color: #02ff39;
+}
+.home-link {
+  background-color: #007bff;
+}
+
+.home-link:hover {
+  background-color: #0056b3;
+}
+
+.dropbtn {
+  background-color: #007bff;
+}
+
+.dropbtn:hover {
+  background-color: #0056b3;
+}
+
+.contact-link {
+  background-color: #ffa502;
+}
+
+.contact-link:hover {
+  background-color: #e69500;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+
+/* Auth buttons */
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-buttons a {
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.signup {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.signup:hover {
+  background-color: #0056b3;
+}
+
+.signin {
+  border: 2px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+}
+
+.signin:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Grid section */
+.grid-section {
+  padding: 40px 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+
+.grid-item {
+  background-color: #fcfcfc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.grid-item:hover {
+  background-color: #eaf4ff;
+  transform: translateY(-5px);
+}
+
+.grid-item h2 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+}
+
+footer .container p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Base grid item style */
+.grid-item {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Individual colors */
+.home-assist {
+  background-color: #ff6b6b; /* Coral Red */
+}
+
+.companionship {
+  background-color: #4ecdc4; /* Aqua Teal */
+}
+
+.transport {
+  background-color: #ffa502; /* Amber Orange */
+}
+
+.urgent {
+  background-color: #3742fa; /* Royal Blue */
+}
+
+/* Hover effect */
+.grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  opacity: 0.95;
+}
+
+/* Headings inside blocks */
+.grid-item h2 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.grid-item p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.grid-item img {
+  margin-top: 15px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.02);
+}
+.grid-item.active {
+  outline: 3px solid #007bff;
+}
+
+.breadcrumb {
+  font-size: 0.95em;
+  margin: 20px 30px;
+  color: #555;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 5px;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  background-color: #ff00ea !important; /* Force blue */
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  font-size: 1em;
+  text-align: center;
+  cursor: pointer;
+  border: none; /* Keep this if you're debugging */
+}
+
+
+
+.nav-links a,
+.dropbtn {
+  width: 140px;
+}
+
+
+.dropbtn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05);
+  
+}
+
+
+
+/* Dropdown content */
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* Pushes dropdown below the button */
+  left: 0;
+  background-color: #ffffff;
+  min-width: 140px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 1000;
+  display: none;
+}
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a {
+  background-color: white;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #e6f0ff;
+}
+
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn::after {
+  content: " ";
+  font-size: 0.8em;
+}
+.dropdown-content {
+  top: calc(100% + 5px); /* Adds 5px spacing */
+}
+
+
+/* Flip card container */
+.flip-card {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Inner wrapper that flips */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+.grid-item,
+.flip-card-front,
+.flip-card-back {
+  min-height: 300px; /* Adjust as needed */
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Front inherits existing grid-item styles */
+.flip-card-front {
+  background-color: inherit;
+  color: rgb(12, 9, 9);
+}
+
+/* Back face styling */
+.flip-card-back {
+  background-color: #ffffff;
+  color: #333;
+  transform: rotateY(180deg);
+}
+
+/* Optional: style headings and paragraphs on back */
+.flip-card-back h2 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  color: #007bff;
+}
+
+.flip-card-back p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: auto;
+  max-height: 180px; /* Optional: limit height to avoid overflow */
+  object-fit: cover;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.flip-card,
+.flip-card-inner,
+.flip-card-front,
+.flip-card-back {
+  height: 100%;
+  min-height: 320px; /* Adjust based on your content */
+}
+
+/* Ensure grid layout still works */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-section {
+  padding: 40px 20px;
+}
+
+.promotion-section {
+  background-color: #007bff;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 30px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.promotion-content h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.promotion-content p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.promo-button {
+  background-color: #ffa502;
+  color: white;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.promo-button:hover {
+  background-color: #e69500;
+}
+
+
+.space
+{
+  background-color: #ffffff;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.test
+{
+  color: rgba(220, 20, 60, 0.904);
+  text-decoration: solid;
+  background-color: #ffa502;
+}
+
+/*Section for Signup page*/
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.signup-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #fff;
+}
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.signup-form select {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+
+.signup-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+.signup-container h1 {
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.signup-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+
+.login-link {
+  margin-top: 20px;
+  font-size: 0.95em;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+/*Section for Contact page*/
+.contact-container{
+background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+.contact-container h1 {
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contact-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #fff;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="password"],
+.contact-form select {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.btn-submit
+{
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+
+/*Section for Signup page*/
+
+
+/* Container styling */
+.login-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 30px auto;
+  transform: translateX(80px);
+}
+
+/* Heading */
+.login-container h1 {
+  margin-bottom: 30px;
+  color: #007bff;
+  font-size: 1.8em;
+}
+
+/* Form layout */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+/* Labels */
+.login-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs */
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button */
+.login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Signup link */
+.signup-link {
+  margin-top: 20px;
+  font-size: 0.95em;
+}
+
+.signup-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .auth-buttons {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .auth-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item {
+    padding: 20px;
+    font-size: 1em;
+  }
+
+  .grid-item h2 {
+    font-size: 1.3em;
+  }
+
+  .grid-item p {
+    font-size: 0.95em;
+  }
+}
